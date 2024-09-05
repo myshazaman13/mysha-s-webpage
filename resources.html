@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Resources</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="resourceStyle.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <script src="rmenu.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body class="resources">
+  <nav>
+    <ul class="sidebar">
+        <li onclick="hideSidebar()"><a href="#"><svg 
+            xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26">
+            <path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/>
+        </svg></a></li>
+        <li><a href="index.html" >Home</a></li>
+        <li><a href="about.html" >About</a></li>
+        <li><a href="mood_log.html">Mood log</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+        <li><a href="filter.html" >Learn More</a></li>
+    </ul>
+    <ul>
+        <li><a href="#"></a></li>
+        <li class="hideOnMobile"><a href="index.html">Home</a></li>
+        <li class="hideOnMobile"><a href="about.html">About</a></li>
+        <li class="hideOnMobile"><a href="mood_log.html">Mood log</a></li>
+        <li class="hideOnMobile"><a href="resources.html">Resources</a></li>
+        <li class="hideOnMobile"><a href="feedback.html">Feedback</a></li>
+        <li class="hideOnMobile"><a href="filter.html" >Learn More</a></li>
+    </ul>
+    <button class="menu-button" onclick="showSidebar()"><svg 
+        xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26">
+        <path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/>
+    </svg>
+    </button>
+</nav>
+    <div class="container_2">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+          <h3>Tips for a better mental health</h3> 
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
+            <li data-target="#myCarousel" data-slide-to="4"></li>
+          </ol>
+      
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner" role="listbox">
+      
+            <div class="item active">
+              <img src="excercise.svg" alt="excercise">
+              <div class="carousel-caption">
+                <h4>Regular physical activity increases the production of endorphins, 
+                  which are natural mood lifters and reduces stress hormones, 
+                  such as adrenaline and cortisol. </h4>
+              </div>
+            </div>
+      
+            <div class="item">
+              <img src="diet.svg" alt="diet">
+              <div class="carousel-caption">
+                <h4>A balanced diet rich in fruits, vegetables, lean protein, 
+                  and whole grains can improve overall brain function.</h4>
+              </div>
+            </div>
+          
+            <div class="item">
+              <img src="sleep.svg" alt="adhd">
+              <div class="carousel-caption">
+                <h4>Quality sleep is essential for emotional regulation and cognitive function. 
+                  Poor sleep is linked to mental health conditions such as depression and anxiety. </h4>
+              </div>
+            </div>
+      
+            <div class="item">
+              <img src="connection.svg" alt="Flower">
+              <div class="carousel-caption">
+                <h4>Social support is crucial for mental health. Having strong, supportive relationships can improve your ability 
+                  to cope with stress and provide a sense of belonging and purpose .</h4>
+              </div>
+            </div>
+
+            <div class="item">
+              <img src="mindfullness.svg" alt="Flower">
+              <div class="carousel-caption">
+                <h4>Mindfulness practices, such as meditation, 
+                  have been shown to reduce symptoms of anxiety and depression by promoting 
+                  relaxation and enhancing the ability to manage stress .</h4>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Left and right controls -->
+          <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+      
+</body>
+</html>

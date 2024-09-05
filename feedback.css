@@ -1,0 +1,210 @@
+/*feedback page style*/
+body.feedback{
+    background-color: rgb(195, 210, 221);
+    display: flex;
+}
+.testimonials{
+    padding: 40px 0;
+    background: none;
+    color: #434343;
+    text-align: center;
+    width: fit-content;
+    height: 100px;
+  }
+  .inner{
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 20px;
+  }
+  
+  .border{
+    width: 160px;
+    height: 5px;
+    background: #718492;
+    margin: 26px auto;
+  }
+  
+  .row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0px;
+  }
+  .col{
+    flex: 33.33%;
+    max-width: 33.33%;
+    box-sizing: border-box;
+    padding: 15px;
+  }
+  .testimonial{
+    background: rgb(74, 94, 118, 0.2);
+    padding: 30px;
+  }
+  .testimonial img{
+    width: 250px;
+    height: 150px;
+    border-radius: 50%;
+  }
+  .name{
+    font-size: 20px;
+    text-transform: uppercase;
+    margin: 20px 0;
+  }
+  .stars{
+    color: #2a2622;
+    margin-bottom: 20px;
+  }
+  
+  
+  @media screen and (max-width:960px) {
+  .col{
+    flex: 100%;
+    max-width: 80%;
+    }
+  }
+  
+  @media screen and (max-width:600px) {
+  .col{
+    flex: 100%;
+    max-width: 80%;
+    }
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.container1 {
+    display: flex; 
+    justify-content: space-around; 
+    flex-wrap: wrap;
+    margin-top: 100px; 
+}
+/*style for star rating*/
+.container {
+    position: relative;
+    width: 400px;
+    background:none;
+    padding: 20px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 50px;
+}
+.container .post{
+    display: none;
+}
+.container .text{
+    font-size: 25px;
+    color: #666;
+    font-weight: 500;
+}
+.container .edit{
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    font-size: 16px;
+    color: #666;
+    font-weight: 500;
+    cursor: pointer;
+}
+.container .edit:hover{
+    text-decoration: underline;
+}
+.container .star-widget input{
+    display: none;
+}
+.star-widget label{
+    font-size: 40px;
+    color: #51616e;
+    padding: 10px;
+    float: right;
+    transition: all 0.2s ease;
+}
+input:not(:checked) ~ label:hover,
+input:not(:checked) ~ label:hover ~ label{
+    color: rgb(44, 53, 66);
+} 
+input:checked ~ label{
+    color: rgb(44,53,66);
+}
+input#rate-5:checked ~ label{
+    color:rgb(44,53,66);
+    text-shadow: 0 0 20px rgb(95, 152, 169);
+}
+#rate-1:checked ~ form header::after{
+    content: " Just hate it";
+}
+#rate-2:checked ~ form header::after{
+    content: " Not good ";
+}
+#rate-3:checked ~ form header::after{
+    content: " Just like it ";
+}
+#rate-4:checked ~ form header::after{
+    content: " It's awesome";
+}
+#rate-5:checked ~ form header::after{
+    content: " Just love it ";
+}
+.container form{
+    display: none;
+}
+input:checked ~ form{
+    display: block;
+}
+form header{
+    width: 100%;
+    font-size: 25px;
+    color: rgb(76, 93, 106);
+    font-weight: 500;
+    margin: 5px 0 20px 0;
+    text-align: center;
+    transition: all 0.2s ease;
+}
+form .textarea{
+    height: 100px;
+    width: 100%;
+    overflow: hidden;
+}
+form .textarea textarea{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    color: #eee;
+    border: 1px solid #333;
+    background:rgb(44,53,66, 0.3);
+    padding: 10px;
+    font-size: 17px;
+    resize: none;
+}
+.textarea textarea:focus{
+    border-color: #9fadb7;
+}
+.textarea ::placeholder{
+    color: #e7dfdf;
+}
+form .btn{
+    height: 45px;
+    width: 100%;
+    margin: 15px 0;
+}
+form .btn button{
+    height: 100%;
+    width: 100%;
+    border: 1px solid #9fadb7;
+    outline: none;
+    background: rgb(44,53,66, 0.3);
+    color: #e7dfdf;
+    font-size: 17px;
+    font-weight: 500;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+form .btn button:hover{
+    background: #1b1b1b;
+}

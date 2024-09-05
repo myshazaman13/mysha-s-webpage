@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="filter.css">
+    <script src="rmenu.js"></script>
+</head>
+<body class="filter">
+    <nav>
+        <ul class="sidebar">
+            <li onclick="hideSidebar()"><a href="#"><svg 
+                xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26">
+                <path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/>
+            </svg></a></li>
+            <li><a href="index.html" >Home</a></li>
+            <li><a href="about.html" >About</a></li>
+            <li><a href="mood_log.html">Mood log</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+            <li><a href="filter.html" >Learn More</a></li>
+        </ul>
+        <ul>
+            <li><a href="#"></a></li>
+            <li class="hideOnMobile"><a href="index.html">Home</a></li>
+            <li class="hideOnMobile"><a href="about.html">About</a></li>
+            <li class="hideOnMobile"><a href="mood_log.html">Mood log</a></li>
+            <li class="hideOnMobile"><a href="resources.html">Resources</a></li>
+            <li class="hideOnMobile"><a href="feedback.html">Feedback</a></li>
+            <li class="hideOnMobile"><a href="filter.html" >Learn More</a></li>
+        </ul>
+        <button class="menu-button" onclick="showSidebar()"><svg 
+            xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26">
+            <path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/>
+        </svg>
+        </button>
+    </nav>
+    <div class="content">
+        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..." title="Type in a name">
+        <ul id="myUL">
+            <li><img src="anxiety.png" alt="Image 2"><a href="https://www.nhs.uk/mental-health/feelings-symptoms-behaviours/feelings-and-symptoms/anxiety-disorder-signs/">Anxiety</a></li>
+            <li><img src="adhd.png" alt="Image 3"><a href="https://www.nhs.uk/conditions/attention-deficit-hyperactivity-disorder-adhd/">ADHD</a></li>
+            <li><img src="Autism_Awareness.png" alt="Image 4"><a href="https://www.nhs.uk/conditions/autism/signs/adults/">Autism</a></li>
+            <li><img src="bipolar.png" alt="Image 5"><a href="https://www.nhs.uk/search/results?q=bipolar%20disorder">Bipolar Disorder</a></li>
+            <li><img src="depression.png" alt="Image 6"><a href="#">Depression</a></li>
+            <li><img src="dyslexia.png" alt="Image 7"><a href="https://www.nhs.uk/mental-health/conditions/depression/">Dyslexia</a></li>
+            <li><img src="ptsd.png" alt="Image 8"><a href="https://www.nhs.uk/mental-health/conditions/post-traumatic-stress-disorder-ptsd/">Post Traumatic Stress Disorder</a></li>
+            <li><img src="imposter_syndrome.png" alt="Image 10"><a href="https://www.ncbi.nlm.nih.gov/books/NBK585058/5c">Imposter Syndrome</a></li>
+        </ul>
+    </div>
+
+    <script>
+        function myFunction() {
+            var input, filter, ul, li, a, i, txtValue;
+            input = document.getElementById("myInput");
+            filter = input.value.trim();
+            ul = document.getElementById("myUL");
+            li = ul.getElementsByTagName("li");
+            for (i = 0; i < li.length; i++) {
+                a = li[i].getElementsByTagName("a")[0];
+                txtValue = a.textContent || a.innerText;
+                // Check if the first letter is capitalized
+                if (filter.length > 0 && filter.charAt(0) === filter.charAt(0)) {
+                    // Check if the list item starts with the filter string
+                    if (txtValue.toUpperCase().startsWith(filter.toUpperCase())) {
+                        li[i].style.display = "";
+                    } else {
+                        li[i].style.display = "none";
+                    }
+                } else {
+                    // If the filter is empty or the first letter is not capitalized, show all list items
+                    li[i].style.display = "";
+                }
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+body.safe{
+    background-color: rgb(195, 210, 221);
+}
+/* Mood log styling remains the same as before */
+.mood-log {
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+/* Mood log colors */
+.mood-1{
+    background-color: rgba(181, 78, 78, 1);
+}
+.mood-2{
+    background-color: rgba(207, 201, 131,1);
+}
+.mood-3{
+    background-color: rgba(136, 167, 129, 1);
+}
+.mood-4{
+    background-color:rgba(170, 140, 169, 1);
+}
+.mood-5{
+    background-color: rgba(133, 154, 193, 1);
+}
+
+/* Hidden input for mood selection */
+.mood-input {
+    display: none;
+}
+
+.mood-log:hover {
+    transform: scale(1.05);
+}
+
+
+.mood-message {
+    text-align: center;
+    font-size: 18px;
+}
+
+.mood-image1, .mood-image2, .mood-image3, .mood-image4, .mood-image5 {
+    width: 100%; 
+    height: auto;
+    margin-top: 10px; 
+}
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgb(116, 141, 158);
+    color: #211e1e;
+}
+
+.mood-log:hover .overlay {
+    opacity: 1;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0px;
+  }
+  .col{
+    flex: 33.33%;
+    max-width: 33.33%;
+    box-sizing: border-box;
+    padding: 15px;
+}
+.safe{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f5f5f5;
+}
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.container1 {
+    display: flex; 
+    justify-content: space-around; 
+    flex-wrap: wrap;
+    margin-top: 100px; 
+}
+.container-fluid {
+    padding: 60px 50px;
+  }
+.bg-grey {
+    background-color: rgba(11, 38, 80, 0.1);
+}
+
+.form-control{
+    background-color: inherit;
+}
+#contact.container-fluid.bg-grey{
+    padding: 150px;
+
+}
+#contact nav{
+    padding: 100px;
+}
+.info{
+    padding: 100px;
+    font-family: cursive;
+    color:rgb(59, 72, 92);
+}
+.info a {
+    text-decoration: none;
+    font-size: 1em;
+    color: white;
+    background-color: rgba(11, 38, 80, 0.3);;
+    padding: 5px 10px;
+    margin: 5px 5px;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.info a:hover {
+    background-color: #1f2f41;
+    transform: scale(1.05);
+}
